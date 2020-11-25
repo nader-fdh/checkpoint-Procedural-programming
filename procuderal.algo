@@ -1,0 +1,31 @@
+PROCEDURE dot_product (var set1,set2 : ARRAY_OF FLOAT;)
+var 
+    dot:FLOAT:=0;
+    i,j:INTEGER;
+begin
+    for i from 0 to set1.length do
+       for j from 0 to set2.length do 
+          dot = set1[i]*set2[j] ;
+       end for
+    end for      
+end
+
+ALGORITHM dot
+var
+
+    sum:FLOAT:=0;
+    i,j:INTEGER;
+    arr1 : ARRAY_OF FLOAT;
+    arr2 : ARRAY_OF FLOAT;
+begin
+ 
+sum:=dot_product(arr1,arr2);
+if (sum === 0) then
+        write ("les 2 vecteurs sont orthogonaux") ;
+    else
+        write ("les 2 vecteurs ne sont pas orthogonaux") ;
+    end if
+end if
+
+end
+  
